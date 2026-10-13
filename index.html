@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Icono de Mancuerna Definitivo -->
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2526/2526392.png">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2526/2526392.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitPulse - Diario Inteligente Pro v17 (Día Actual Automático)</title>
+    <title>FitPulse - Diario Inteligente Pro v17</title>
+    
+    <!-- Icono Personalizado de FitPulse -->
+    <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/al2004lual-art/fitpulse/refs/heads/main/icono%20app.jfif">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/al2004lual-art/fitpulse/refs/heads/main/icono%20app.jfif">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Lucide Icons -->
@@ -413,7 +415,7 @@
         let routineData = JSON.parse(localStorage.getItem('fitpulse_routine')) || defaultRoutine;
         if (!routineData["Domingo"]) routineData["Domingo"] = { name: "Descanso / Día Libre", exercises: [] };
 
-        let currentDay = getTodayName(); // Selecciona automáticamente el día de hoy al abrir
+        let currentDay = getTodayName();
         let workoutHistory = JSON.parse(localStorage.getItem('fitpulse_history')) || [];
         let activeExerciseIndexForChange = null;
         let activeEditingHistoryId = null;
